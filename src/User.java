@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     /**
-     * niepoprawny camel case dla pół - z dużej litery.
+     * niepoprawny camel case dla pól - z dużej litery.
      */
     private DeviceType system;
-    private Game ubscribedGame;
+    private List<Game> subscribedGames = new ArrayList<>();
     private long uniqueID;
 
 
@@ -13,4 +16,10 @@ public class User {
     public void notifyUser(){
 
     }
+
+    public void addGame(Game game){
+        subscribedGames.add(game);
+    }
+
+
 }
