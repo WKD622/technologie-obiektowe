@@ -23,7 +23,8 @@ public class Game {
     }
 
     public void notifyObservers() {
-        System.out.println("notify");
+        for (User usr: observers)
+            usr.notifyUser(this);
     }
 
     public void setResult(List<Integer> result) {
