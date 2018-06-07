@@ -18,12 +18,16 @@ public class Device {
         subscribedGames = new ArrayList<>();
     }
 
-    void notifyUser(Game game) {
-        System.out.println("Hello user " + uniqueID + ". You are notified by game" + game + ".");
+    void notifyUser(Game game, List<Integer> result) {
+        System.out.println("Hello " + uniqueID + ". You are notified by " + game + ". Result: " + result);
     }
 
     public void addGame(Game game) {
         subscribedGames.add(game);
+    }
+
+    public void removeGame(Game game) {
+        subscribedGames.remove(game);
     }
 
     @Override

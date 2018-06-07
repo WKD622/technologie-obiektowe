@@ -33,7 +33,7 @@ public class Game {
 
     public void notifyObservers() {
         for (Device usr : observers)
-            usr.notifyUser(this);
+            usr.notifyUser(this, getResult());
     }
 
     public void setResult(List<Integer> result) {
