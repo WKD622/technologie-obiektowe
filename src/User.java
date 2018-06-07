@@ -7,6 +7,9 @@ public class User {
     private List<Game> subscribedGames;
     private long uniqueID;
 
+    public List<Game> getSubscribedGames() {
+        return subscribedGames;
+    }
 
     public User(DeviceType system, long uniqueID) {
         this.system = system;
