@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
@@ -5,6 +6,13 @@ public class Game {
     private long gameID;
     private List<Integer> result;
     private List<User> observers;
+
+    public Game(String gameName, long gameID) {
+        this.gameName = gameName;
+        this.gameID = gameID;
+        result = new ArrayList<>();
+        observers = new ArrayList<>();
+    }
 
     public String getGameName() {
         return gameName;
@@ -18,12 +26,12 @@ public class Game {
         observers.add(user);
     }
 
-    public void removeObserver(User user){
+    public void removeObserver(User user) {
         observers.remove(user);
     }
 
     public void notifyObservers() {
-        for (User usr: observers)
+        for (User usr : observers)
             usr.notifyUser(this);
     }
 
@@ -33,7 +41,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return gameName;
+        return "(" + gameName + " id:" + gameID + ")";
     }
 }
 

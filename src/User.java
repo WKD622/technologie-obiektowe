@@ -8,7 +8,7 @@ public class User {
     private long uniqueID;
 
 
-    public User(DeviceType system, long uniqueID){
+    public User(DeviceType system, long uniqueID) {
         this.system = system;
         this.uniqueID = uniqueID;
         subscribedGames = new ArrayList<>();
@@ -24,6 +24,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "I'm " +uniqueID + "running " + system + ".";
+        return "I'm " + uniqueID + "running " + system + ".";
     }
 }
