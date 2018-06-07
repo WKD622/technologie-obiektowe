@@ -15,7 +15,7 @@ public class User {
     }
 
     void notifyUser(Game game) {
-        System.out.println("Hello " + uniqueID + ". You are notified by " + game.toString() + ".");
+        System.out.println("Hello " + uniqueID + ". You are notified by " + game + ".");
     }
 
     public void addGame(Game game) {
