@@ -8,6 +8,9 @@ public class User {
     private long uniqueID;
     private static Long id = new Long(0);
 
+    public List<Game> getSubscribedGames() {
+        return subscribedGames;
+    }
 
     public User(DeviceType system) {
         this.system = system;
