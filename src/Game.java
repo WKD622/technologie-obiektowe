@@ -5,7 +5,7 @@ public class Game {
     private String gameName;
     private long gameID;
     private List<Integer> result;
-    private List<User> observers;
+    private List<Device> observers;
     private static Long id = new Long(0);
 
     public Game(String gameName) {
@@ -23,16 +23,16 @@ public class Game {
         return result;
     }
 
-    public void addObserver(User user) {
+    public void addObserver(Device user) {
         observers.add(user);
     }
 
-    public void removeObserver(User user) {
+    public void removeObserver(Device user) {
         observers.remove(user);
     }
 
     public void notifyObservers() {
-        for (User usr : observers)
+        for (Device usr : observers)
             usr.notifyUser(this);
     }
 

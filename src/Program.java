@@ -5,14 +5,14 @@ import java.util.Random;
 public class Program {
 
     public static void main(String[] args) {
-        ArrayList<User> users = new ArrayList<>();
+        ArrayList<Device> users = new ArrayList<>();
         ArrayList<Game> games = new ArrayList<>();
 
         for (int i = 0; i < 2; ++i)
             games.add(new Game("gra" + i));
 
         for (int i = 0; i < 10; ++i) {
-            User user = new User(DeviceType.android);
+            Device user = new Device(DeviceType.android);
             user.addGame(games.get(i % 2));
             games.get(i % 2).addObserver(user);
             users.add(user);

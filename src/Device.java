@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class Device {
 
     private DeviceType system;
     private List<Game> subscribedGames;
     private long uniqueID;
-    private static Long id = new Long(0);
+    private static long id;
 
     public List<Game> getSubscribedGames() {
         return subscribedGames;
     }
 
-    public User(DeviceType system) {
+    public Device(DeviceType system) {
         this.system = system;
         this.uniqueID = id++;
         subscribedGames = new ArrayList<>();
