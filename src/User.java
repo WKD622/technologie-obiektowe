@@ -13,8 +13,8 @@ public class User {
     /**
      * notify słowo kluczowe, nie można nadpisać.
      */
-    public void notifyUser(){
-
+    public void notifyUser(Game game){
+        System.out.printf("Hello " , uniqueID,". You are notified by ", game, ".");
     }
 
     public void addGame(Game game){

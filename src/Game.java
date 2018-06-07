@@ -23,13 +23,16 @@ public class Game {
     }
 
     public void notifyObservers() {
-        System.out.printf("notify");
+        System.out.println("notify");
     }
 
     public void setResult(List<Integer> result) {
         this.result = result;
     }
 
-
+    @Override
+    public String toString() {
+        return gameName;
+    }
 }
 
