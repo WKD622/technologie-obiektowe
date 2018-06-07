@@ -4,11 +4,17 @@ import java.util.List;
 public class User {
 
     private DeviceType system;
-    private List<Game> subscribedGames = new ArrayList<>();
+    private List<Game> subscribedGames;
     private long uniqueID;
 
 
-    public void notifyUser(Game game) {
+    public User(DeviceType system, long uniqueID){
+        this.system = system;
+        this.uniqueID = uniqueID;
+        subscribedGames = new ArrayList<>();
+    }
+
+    void notifyUser(Game game) {
         System.out.println("Hello " + uniqueID + ". You are notified by " + game.toString() + ".");
     }
 
@@ -16,5 +22,8 @@ public class User {
         subscribedGames.add(game);
     }
 
-
+    @Override
+    public String toString() {
+        return "I'm " +uniqueID + "running " + system + ".";
+    }
 }
