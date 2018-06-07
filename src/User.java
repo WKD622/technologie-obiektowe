@@ -6,11 +6,12 @@ public class User {
     private DeviceType system;
     private List<Game> subscribedGames;
     private long uniqueID;
+    private static Long id = new Long(0);
 
 
-    public User(DeviceType system, long uniqueID) {
+    public User(DeviceType system) {
         this.system = system;
-        this.uniqueID = uniqueID;
+        this.uniqueID = id++;
         subscribedGames = new ArrayList<>();
     }
 

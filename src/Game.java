@@ -6,10 +6,11 @@ public class Game {
     private long gameID;
     private List<Integer> result;
     private List<User> observers;
+    private static Long id = new Long(0);
 
-    public Game(String gameName, long gameID) {
+    public Game(String gameName) {
         this.gameName = gameName;
-        this.gameID = gameID;
+        this.gameID = id++;
         result = new ArrayList<>();
         observers = new ArrayList<>();
     }
