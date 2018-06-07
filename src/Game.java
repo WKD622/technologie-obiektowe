@@ -42,7 +42,6 @@ public class Game {
 
     @Override
     public String toString() {
-        return "(" + gameName + " id:" + gameID + ")";
+        return "(" + gameName + " id: " + gameID + ")";
     }
 }
-
